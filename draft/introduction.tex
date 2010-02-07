@@ -1,0 +1,42 @@
+\section{Introduction}
+Advances in cloud computing technologies have allowed consumers and businesses
+to run their applications on demand to enormous scale. They can rent hundreds
+or thousands of computers with supported infrastructure to process data and
+compute results. The rental cost of a hundred machines with over a terabyte of
+aggregated memory is now below \$100 per hour, making it feasible for users to
+process terabyte of data in main memory in the cloud. IDC predicted that by
+2102, customer spending on cloud services will grow almost to \$42 billion.
+Besides providing good performance and low cost services, the cloud computing
+infrastructure needs to guarantee fault-tolerant.
+
+As the cluster scales, the fault-tolerant requirement becomes harder and harder
+to fulfill. Estimates based on recent cluster growth rates predict that the
+mean-time-to-failure of large-scale applications will become significantly
+shorter than its execution. So, using the conventional checkpoint-recovery
+techniques, the applications will spend all its time writing checkpoints or
+recovering. That leads to zero-utilization. Hence, there is a dire-need to
+provide a feasible fault-tolerant mechanism for cloud computing services.
+
+With funding, our plan firstly is to develop efficient
+checkpoint-recovery techniques that users can easily use to make their
+large-scale applications fault-tolerant.
+
+For the past one year, we have focus on a specified domain in cloud
+applications, i.e. Massively Multiplayer Online Games and large-scale
+simulations. We thoroughly researched and evaluated the applicability of
+existing checkpoint recovery techniques which were developed for MMOs. There
+are no appropriate solutions which can be applied to various types of workload
+in these applications. As such, we are designing new state fault-tolerance
+techniques that are more adequate to the particularities of these applications.
+Interactive applications, such as MMOs, have latency as a major concern; on the
+other hand, non-interactive applications, such as scientific simulations, must
+be run on large clusters with low overhead. The experimental evaluations of our
+ongoing work showed that our new algorithms achieved nearly constant latency
+and more than one order-of-magnitude lower overhead than the best previous
+methods.
+
+The next step in our plan is to package our technologies as a library to sell
+to cloud computing providers as well as users which would like to make their
+large-scale applications fault-tolerant.
+
+
